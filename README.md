@@ -1,74 +1,45 @@
-<h1> <center> Projeto - Análise de Dados SIH SUS <a href="#SIHSUS" id="SIHSUSref"> <sup> 1 </sup> </a>  Partos na cidade do Rio de Janeiro </center> </h1>
+<h1> <center> Análise de Dados Registros de COVID19 na cidade do Rio de Janeiro </center> </h1>
 
 <p align="center">
-<img src="https://img.shields.io/badge/Python-100%25-lightgrey">
+<img src="https://img.shields.io/badge/Python-50%25-lightgrey">
+ <img src="https://img.shields.io/badge/Power Bi-50%25-lightgrey">
+
 
  <img>
 <a href="https://github.com/datalabe/Projeto_Analise_Eleitoral/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/datalabe/Projeto_Analise_Eleitoral"></a>
 </p>
 
 
-<p> No Rio de Janeiro, parto humanizado ainda é coisa de mulheres ricas e brancas.
-  
-Enquanto as maternidades tradicionais do SUS carioca (Rede Cegonha) atendem mais mulheres negras do que brancas, os números se invertem na Casa de Parto David Capistrano, a única opção de parto humanizado gratuito no Rio de Janeiro. Conversamos com mães, enfermeiras e médicos para entender o rolê que é o atendimento gestacional humanizado para uma mulher preta.
+<p> Em 2020 fomos surpreendidos com a pademia de covid19 no Brasil, em fevereiro o primeiro caso foi registrado em São Paulo e desde então convivemos com o vírus circulado em todo o território nacional. A maior crise sanitária e hospitalar do Brasil bateu a marca de 7.675.781 de contaminados e 194.976 óbitos por coronavírus no fim do ano de 2020.
+ 
+ No Rio de Janeiro o histórico difere de outras partes do território nacional,sobretudo em território vulneráveis. O Painel Unificador da covid19 nas favelas divulgou em dezembro de 2020 um total de 25.800 casos confirmados em 228 favelas da capital e municípios da Baixada Fluminense, com 2.901 óbitos confirmados. O maior número de casos foi encontrado no Complexo da Maré, zona norte da cidade (2.449), enquanto o maior número de óbitos (217) foi registrado na Comunidade Sem Terra, em Itaguaí. O painel representava no mesmo ano cerca de 64% dos domicílios das favelas na cidade do Rio. 
+ 
+ Com esse parâmetro o data_labe com sua equipe de dados buscou os registros de covid 19 para entender a evolução dos quadros por territórios da cidade do Rio e os impactos na população, principalmente das favelas comparando com os dados oficiais e do painel unificador.
 </p>
 
-#### Reportagem  [PARTOS DA PRETAS](https://datalabe.org/parto-das-pretas/) 
 
-
-
-
-
-
-
-
-<a id="SIHSUS" href="SIHSUS"> <sup> 1 </sup> </a> Sistema de Internação Hospitalar do Sistema de Saúde Único
 
   
 ##  Dados
 
-Foi coletado dados do SIH-SUS de Janeiro de 2019 a Junho de 2020, no qual foi filtrado apenas internações da cidade do Rio de Janeiro e por códigos de procedimentos de parto, dado os 4 tipos de categorias: Humanizado, Rede Cegonha, Universitário, Não Rede Cegonha. O objetivo da análise foi entender como esse dados se comportam em relação a raça, faixa etária e unidade hospitalar.
+Foi coletado dados do secretária de saúde do Rio de Janeiro de Dezembro de 2019 a Dezembro de 2020, no qual foi filtrado apenas internações da cidade do Rio de Janeiro por cep. Os dados estavam categorizados como recuperados (88676), óbitos(8093) e ativos (725).
 
- - Códigos:
-   
-0310010039 - Parto normal  
-020203109  - Reação de hemaglutinação (TPHA) p/ diagnóstico da siflis   
-0310010047 - Parto normal em gestação de alto risco      
-0310010055 - Parto normal em centro de parto normal (CPN)   
-0411010026 - Parto cesariano em gestação de alto risco   
-0411010034 - Parto cesariano   
-0411010042 - Parto cesariano com laqueadura tubaria       
-0411020048 - Tratamento cirúrgico de gravidez  ectópica     
-021401004  - Teste rápido para detecção de HIV em gestante      
-
-
+A base foi limpa e estruturada por semana epidemiologica e território para criação de visualização de dados usando a ferramenta Power BI
 
  
-  - Dados SIH/SUS :point_right: [AQUI](https://divulgacandcontas.tse.jus.br/divulga/#/)
  
  #### Neste repositório você encontra:
                    
-                   1. Base de dados 2019 SIH-SUS
-                   2. Base de dados 2020 SIH-SUS
-                   3.Jupyter Notebook com a limpeza do dados, as análises e comentários
-                   4. Relatório da análise
+                   1. Base de dados registros por CEP
+                   2. Base de dados registro por área de planejamento urbano
+                   3. Base dados geradas de registros por semana epidemiológica
+                   4. Jupyter Notebook com a limpeza do dados e estruturação dos dados
+                   5. Gráficos gerados no Power BI
                                   
 
 
-:nerd_face: | EQUIPE DE DADOS: [Estephany Nunes](https://instagram.com/esteeeephany), [Paulo Mota](https://rpubs.com/polinhobr/679254) e [Samantha Reis](https://github.com/SamanthaReiis)
-  
-##  Conclusão
+:nerd_face: | ESTE PROJETO FOI REALIZADO POR: [Estephany Nunes](https://instagram.com/esteeeephany) e [Samantha Reis](https://github.com/SamanthaReiis)
 
-   Das 413664 internações registradas nessa janela temporal na cidade do Rio de Janeiro aproximadamente 17% são por procedimentos de partos e nesta os partos normais são mais prevalentes por política do SUS, e tendo em segundo lugar partos cesarianos. Na Rede cegonha e Não Rede Cegonha a maioria dos partos são normais, já os hospitais universitários concentram os partos de maior risco, tem-se por política este encaminhamento via SUS. Na casa de parto, apenas mulheres de baixo risco podem ter seus filhos lá e portanto todas terão parto normal.  
- 
- Em todos os hospitais mulheres negras são mais mais prevalente, sem surpresas. Porém foi descoberto  que na única  casa de parto humanizado no Rio  de Janeiro a porcentagem de mulheres brancas é bem superior a de qualquer outro hospital, bem como mulheres pretas tem menor participação neste hospital do que em outros. Isso revela uma falta de acesso, muito provavelmente pela falta de informação e não exclusão, porque todos são SUS.    
- 
- Na casa de parto humanizado é onde temos menor participação das faixas etárias fora de 20-34 anos, que seria a de menor risco. As casas de parto tem um apontamento se o parto é de risco ou não pela biologia do corpo da mulher,  aquelas abaixo de 19 e maiores que 35 terão mais riscos de complicação. Isso faz com que o público da casa de parto humanizado seja sempre mais composto pela faixa etária fora das faixas de riscos. Só que mulheres abaixo de 19 anos tendo filhos é um reflexo da ausência de políticas familiares que faz com que meninas engravidem e tenham que realizar o parto. A faixa etária que revela maior planejamento é a de 35 a 49 anos, que em geral é a mulher inserida no mercado de trabalho.  
- 
- O total dos partos normais na Casa de Parto David Capistrano é responsável por menos de 1% do total, a não ampliação de estabelecimentos desse perfil torna o parto humanizado e natural um evento extremamente raro, mesmo com a aprovação do projeto de lei que incentivava a inauguração de mais casas de parto. O que explica isso foi a troca no Ministério Saúde e o corporativismo da classe médica no Brasil
-  
-  <a id="#negros3" href="negros3ref"> <sup> 3 </sup> </a> *A análise considera <u>negros</u>*  *como a soma de pretos e pardos, isto devido o recorte racial que está sendo feito na análise e entendimento da população negra no Brasil por parte da organização.*
-  
   
 ##   Licença
 
